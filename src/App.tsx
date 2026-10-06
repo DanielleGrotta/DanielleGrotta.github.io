@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react'
-import { content, links, type Lang } from './content'
+import { content, links, stack, type Lang } from './content'
 import SurveyDemo from './demos/SurveyDemo'
 import CampaignDemo from './demos/CampaignDemo'
 import DashboardDemo from './demos/DashboardDemo'
@@ -13,6 +13,7 @@ const initialLang = (): Lang => (store.get('lang') as Lang) || (navigator.langua
 const initialTheme = (): Theme => (store.get('theme') as Theme) || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
 
 const DEMOS: Record<string, (p: { lang: Lang }) => ReactNode> = { surveys: SurveyDemo, campaign: CampaignDemo, dashboard: DashboardDemo }
+const SRC: Record<string, string> = { surveys: 'SurveyDemo', campaign: 'CampaignDemo', dashboard: 'DashboardDemo' }
 
 export default function App() {
   const [lang, setLang] = useState<Lang>(initialLang)
@@ -54,6 +55,10 @@ export default function App() {
             <a className="btn" href={links.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
             <a className="btn" href={links.github} target="_blank" rel="noreferrer">GitHub ↗</a>
           </div>
+          <div className="stack">
+            <span className="mono">{c.hero.stackLabel}</span>
+            <ul>{stack.map((x) => <li key={x} className="mono">{x}</li>)}</ul>
+          </div>
         </section>
 
         <section id="work" className="wrap">
@@ -87,6 +92,7 @@ export default function App() {
                 <figure className="case-demo">
                   <figcaption className="mono">{k.demoLabel}</figcaption>
                   <Demo lang={lang} />
+                  <a className="src mono" href={`${links.repo}/blob/main/src/demos/${SRC[k.id]}.tsx`} target="_blank" rel="noreferrer">{'</>'} {c.source}: {SRC[k.id]}.tsx ↗</a>
                 </figure>
               </div>
             </article>

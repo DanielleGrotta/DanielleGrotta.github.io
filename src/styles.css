@@ -174,3 +174,10 @@ section, .case { padding-block: 56px }
 .contact .mail { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 24px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); width: fit-content; max-width: 100% }
 .contact .mail .mono { font-size: 1rem; word-break: break-all }
 footer { padding-block: 32px 48px; color: var(--dim); border-top: 1px solid var(--line) }
+
+.stack { margin-top: 40px; display: flex; flex-direction: column; gap: 10px }
+.stack > span { color: var(--dim) }
+.stack ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px }
+.stack li { padding: 5px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink) }
+.src { display: inline-block; margin-top: 14px; color: var(--accent2); text-decoration: none }
+.src:hover { text-decoration: underline }
