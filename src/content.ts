@@ -122,7 +122,7 @@ const en: Content = {
     eduHead: 'Education',
     edu: ['Fatec Americana · Business Management (2023–2025)', 'Fatec Americana · Game Development (2019–2022)', 'Google UX Design · Microsoft UX Design certificates', 'Portuguese (native) · English (fluent)'],
   },
-  contact: { head: 'Contact', lead: 'Looking for a remote Front-End Developer, UX Engineer, Design Engineer or Product Designer role. Write me.', copy: 'Copy email', copied: 'Copied' },
+  contact: { head: 'Contact', lead: 'Want to talk about a project, a role or an idea? Write me.', copy: 'Copy email', copied: 'Copied' },
   footer: 'Designed and built by Danielle Grotta with React and TypeScript.',
 }
 
@@ -216,7 +216,7 @@ const pt: Content = {
     eduHead: 'Formação',
     edu: ['Fatec Americana · Gestão Empresarial (2023–2025)', 'Fatec Americana · Jogos Digitais (2019–2022)', 'Certificados Google UX Design · Microsoft UX Design', 'Português (nativo) · Inglês (fluente)'],
   },
-  contact: { head: 'Contato', lead: 'Procurando vaga remota de Front-End Developer, UX Engineer, Design Engineer ou Product Designer. Me escreva.', copy: 'Copiar e-mail', copied: 'Copiado' },
+  contact: { head: 'Contato', lead: 'Quer conversar sobre um projeto, uma vaga ou uma ideia? Me escreva.', copy: 'Copiar e-mail', copied: 'Copiado' },
   footer: 'Design e código por Danielle Grotta, em React e TypeScript.',
 }
 

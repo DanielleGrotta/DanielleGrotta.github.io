@@ -45,7 +45,6 @@ export default function App() {
 
       <main id="top">
         <section className="hero wrap">
-          <p className="mono eyebrow"><span className="dot" />{c.hero.available}</p>
           <h1>Danielle Grotta</h1>
           <p className="role mono">{c.hero.role}</p>
           <p className="hero-title">{c.hero.title}</p>
