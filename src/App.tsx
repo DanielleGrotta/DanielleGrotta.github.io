@@ -3,6 +3,7 @@ import { content, links, stack, type Lang } from './content'
 import SurveyDemo from './demos/SurveyDemo'
 import CampaignDemo from './demos/CampaignDemo'
 import DashboardDemo from './demos/DashboardDemo'
+import Projects from './Projects'
 
 type Theme = 'dark' | 'light'
 const store = {
@@ -33,6 +34,7 @@ export default function App() {
       <header className="top">
         <a href="#top" className="logo" aria-label="Danielle Grotta">dg<span>_</span></a>
         <nav>
+          <a href="#projects">{lang === 'pt' ? 'Projetos' : 'Projects'}</a>
           <a href="#work">{c.nav.work}</a>
           <a href="#about">{c.nav.about}</a>
           <a href="#contact">{c.nav.contact}</a>
@@ -59,6 +61,8 @@ export default function App() {
             <ul>{stack.map((x) => <li key={x} className="mono">{x}</li>)}</ul>
           </div>
         </section>
+
+        <Projects lang={lang} />
 
         <section id="work" className="wrap">
           <div className="sec-head">
